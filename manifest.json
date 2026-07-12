@@ -1,0 +1,21 @@
+{
+  "name": "Paula's arte",
+  "short_name": "Paula's arte",
+  "description": "A loja online da Paula's arte",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
