@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paula's arte | Presentes e Artesanato Único ✨</title>
+<meta name="description" content="Descubra a magia das peças artesanais na Paula's arte. Artigos personalizados feitos com amor. Encomende online!">
+<meta name="keywords" content="artesanato, presentes, feito a mao, paulas arte, portugal, personalizado">
+<meta property="og:title" content="Paula's arte ✨">
+<meta property="og:description" content="A tua loja favorita de artesanato e mimos feitos com amor. Espreita a nossa coleção!">
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_WfWrS7-NmiNa3cHM1Yu7GraVdop0Tkr9d5fhijAZFnYxntWCYR5AN9xWN2un-XSQKaEHFvC8aYe5cvu18W9lqj_YsuoSyA0ET5_XDCq61ch-SC2XbejIYmeqevaLOnvV1GS9aFrx2UyirC061zv8zbg32vhHDHTt3TB6UC3gFxmGepRpQ6mfIH5khf4/s1024/32893.png">
+<meta property="og:url" content="https://paulasarte.github.io/">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png">
+<link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png">
+<meta name="theme-color" content="#ffffff">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root { 
+  --cinza-escuro: #333333; 
+  --cinza-medio: #71717a;
+  --cinza-claro: #f4f4f5; 
+  --fundo: #ffffff; 
+}
+body { font-family:sans-serif; max-width:450px; margin:auto; padding:15px; background:var(--fundo); color: var(--cinza-escuro); }
+
+#splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--fundo); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; }
+#splash img { 
+  width: 160px; 
+  background: #ffffff;
+  border-radius: 35px; 
+  padding: 10px;
+  box-shadow: inset 0 0 0 10px var(--cinza-claro), 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 15px; 
+}
+#splash h2 { font-size: 30px; color: var(--cinza-escuro); font-family: 'Great Vibes', cursive; }
+
+h1 { text-align:center; margin-bottom:10px; }
+h1 .logo { 
+  max-width: 150px; 
+  width: 100%; 
+  background: #ffffff;
+  border-radius: 35px; 
+  padding: 8px;
+  box-shadow: inset 0 0 0 8px var(--cinza-claro), 0 2px 8px rgba(0,0,0,0.05);
+  display: block; 
+  margin: 0 auto; 
+}
+h1 .titulo { margin-top:8px; color:var(--cinza-escuro); font-size:36px; font-family:'Great Vibes', cursive; }
+
+.search { width:100%; padding:12px; border-radius:10px; border:1px solid #ddd; margin-bottom:15px; box-sizing: border-box; background: var(--cinza-claro); }
+
+.tabs-container { position: relative; margin-bottom: 15px; overflow: hidden; }
+.tabs { display:flex; gap:8px; overflow-x:auto; padding: 10px 0; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { padding:8px 18px; background:var(--cinza-claro); border-radius:12px; cursor:pointer; white-space: nowrap; transition: 0.3s; font-size: 14px; flex-shrink: 0; font-weight: bold; border: 1px solid transparent; color: var(--cinza-escuro); }
+.tab.active { background:var(--cinza-escuro); color:white; transform: scale(1.05); }
+
+.card { background:var(--cinza-claro); border-radius:15px; margin-bottom:20px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.05); position: relative; }
+.card-wrap { position: relative; }
+.badge { position:absolute; left:10px; top:10px; background:var(--cinza-escuro); color:white; padding:5px 8px; border-radius:8px; font-size:12px; font-weight:bold; z-index: 2; }
+.fav { position:absolute; right:10px; top:10px; font-size:22px; cursor:pointer; z-index: 2; }
+.img-p { width:100%; height:250px; object-fit:cover; cursor:pointer; display: block; }
+
+.info { padding:15px; text-align:center; }
+.nome-clicavel { cursor:pointer; color:var(--cinza-escuro); text-decoration:underline; font-size: 18px; margin: 0 0 10px 0; }
+.btn-add { background:var(--cinza-escuro); color:white; border:none; padding:12px; width:100%; border-radius:10px; cursor:pointer; font-weight: bold; }
+
+.carrinho { background:var(--fundo); padding:20px; border-radius:15px; margin-top:30px; border: 2px solid var(--cinza-escuro); }
+.item-cart { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; border-bottom: 1px solid #eee; padding-bottom: 5px; font-size: 14px; }
+.cart-btns { display: flex; gap: 5px; align-items: center; }
+.cart-btns button { background: var(--cinza-claro); border: 1px solid #ccc; width: 28px; height: 28px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+
+.btn-w { background:#25D366; color:white; padding:15px; border:none; width:100%; border-radius:10px; margin-top:8px; cursor:pointer; font-weight: bold; font-size: 16px; }
+
+#install-banner { position: fixed; bottom: 20px; left: 10px; right: 10px; background: var(--cinza-escuro); color: white; padding: 15px; border-radius: 12px; display: none; z-index: 10001; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+#install-banner button { background: white; color: var(--cinza-escuro); border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; margin-top: 10px; cursor: pointer; }
+
+.modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:10000; }
+.modal img { max-width:95%; max-height:85%; border-radius:10px; }
+.modal-texto { background:white; padding:25px; border-radius:20px; max-width:85%; text-align:center; }
+
+.paginacao { display:flex; justify-content:center; gap:8px; margin:20px 0; flex-wrap:wrap; }
+.btn-pag { padding:8px 14px; border:1px solid #ddd; background:white; border-radius:8px; cursor:pointer; }
+.btn-pag.active { background:var(--cinza-escuro); color:white; border-color: var(--cinza-escuro); }
+
+input, select { width:100%; padding:12px; margin-top:8px; border-radius:8px; border:1px solid #ddd; box-sizing: border-box; background: var(--cinza-claro); }
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_WfWrS7-NmiNa3cHM1Yu7GraVdop0Tkr9d5fhijAZFnYxntWCYR5AN9xWN2un-XSQKaEHFvC8aYe5cvu18W9lqj_YsuoSyA0ET5_XDCq61ch-SC2XbejIYmeqevaLOnvV1GS9aFrx2UyirC061zv8zbg32vhHDHTt3TB6UC3gFxmGepRpQ6mfIH5khf4/s1024/32893.png">
+  <h2>Olá 👋</h2>
+</div>
+
+<div id="install-banner">
+  <div>Gostavas de ter a Paula's arte no teu ecrã inicial? ✨</div>
+  <button id="install-button">Instalar Agora</button>
+</div>
+
+<h1>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_WfWrS7-NmiNa3cHM1Yu7GraVdop0Tkr9d5fhijAZFnYxntWCYR5AN9xWN2un-XSQKaEHFvC8aYe5cvu18W9lqj_YsuoSyA0ET5_XDCq61ch-SC2XbejIYmeqevaLOnvV1GS9aFrx2UyirC061zv8zbg32vhHDHTt3TB6UC3gFxmGepRpQ6mfIH5khf4/s1024/32893.png" class="logo">
+  <div class="titulo">Paula's arte ✨</div>
+</h1>
+
+<input class="search" id="pesquisa" placeholder="🔍 Procurar em toda a loja..." oninput="irParaPagina(1)">
+
+<div class="tabs-container">
+  <div class="tabs" id="tabs"></div>
+</div>
+
+<div id="loja"></div>
+<div class="paginacao" id="paginacao"></div>
+
+<div class="carrinho">
+  <h2>🛒 O Teu Pedido</h2>
+  <p>💳 MBWay: <strong>938671014</strong></p>
+  <div id="itens-carrinho"></div>
+  <p id="total-carrinho" style="font-size: 18px; margin: 15px 0; border-top: 1px solid #eee; padding-top: 10px;"></p>
+  
+  <input id="cliente" placeholder="Teu Nome Completo">
+  <input id="telefone" placeholder="Teu Telemóvel">
+  <input id="morada" placeholder="Morada completa de envio">
+  
+  <label style="display:block; margin-top:15px;"><strong>📦 Método de envio:</strong></label>
+  <select id="envio" onchange="atualizar()">
+    <option>Levantamento (Grátis)</option>
+    <option>CTT Normal</option>
+    <option>CTT Registado</option>
+  </select>
+
+  <button onclick="finalizar()" class="btn-w">Finalizar via WhatsApp</button>
+  <button onclick="alert('Pagar para: 938671014\nEnvie o comprovativo pelo WhatsApp. 😊')" class="btn-w" style="background:#555;">Pagar via MBWay</button>
+  <button onclick="copiar()" class="btn-w" style="background:#111;">Copiar Resumo</button>
+  <button onclick="limparCarrinho()" class="btn-w" style="background:#dc2626; font-size: 12px; padding: 8px;">Anular Pedido</button>
+</div>
+
+<div class="modal" id="modalImg" onclick="fecharModal()"><img id="imgGrande"></div>
+<div class="modal" id="modalTexto" onclick="fecharModal()">
+  <div class="modal-texto" onclick="event.stopPropagation()">
+    <h3 id="tituloPedra" style="font-family:'Great Vibes'; font-size:30px; color:var(--cinza-escuro);"></h3>
+    <p id="corpoSignificado" style="line-height:1.6;"></p>
+    <button onclick="fecharModal()" style="background:var(--cinza-escuro); color:white; border:none; padding:10px 20px; border-radius:10px; margin-top:15px; cursor:pointer;">Fechar</button>
+  </div>
+</div>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW error:', err));
+  });
+}
+
+let deferredPrompt;
+const installBanner = document.getElementById('install-banner');
+const installButton = document.getElementById('install-button');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  let visitas = parseInt(localStorage.getItem('visitas_paulasarte') || '0') + 1;
+  localStorage.setItem('visitas_paulasarte', visitas);
+  if (visitas >= 3) { installBanner.style.display = 'block'; }
+});
+
+installButton.addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') { installBanner.style.display = 'none'; }
+      deferredPrompt = null;
+    });
+  }
+});
+
+window.onload = () => setTimeout(() => document.getElementById("splash").style.display = "none", 2000);
+
+const API = 'https://script.google.com/macros/s/AKfycbw7iXZ525CvJqAHfBR23OsiarAxrjFU_vaHA75JA7G2hjy9Xany3bvKNdkpNQP7Jch3/exec'; 
+let db = [], cart = JSON.parse(localStorage.getItem("cart")) || [], favs = JSON.parse(localStorage.getItem("favs")) || [];
+let categoriaAtual = "", paginaAtual = 1;
+const itensPorPagina = 10;
+
+function centrarAba(texto) {
+  setTimeout(() => {
+    const container = document.getElementById('tabs');
+    const abas = document.querySelectorAll('.tab');
+    let ativa = null;
+    abas.forEach(t => { if(t.innerText === texto) ativa = t; });
+    if (ativa && container) {
+      const scrollFinal = ativa.offsetLeft - (container.offsetWidth / 2) + (ativa.offsetWidth / 2);
+      container.scrollTo({ left: scrollFinal, behavior: 'smooth' });
+    }
+  }, 100);
+}
+
+fetch(API).then(r=>r.json()).then(data => {
+  db = data.map(p=>({
+    ...p,
+    id: parseInt(p.id),
+    preco: parseFloat(p.preco),
+    precoPromo: p.precoPromo ? parseFloat(p.precoPromo) : null,
+    promo: p.promo === "sim",
+    categoria: p.categoria || "Outros",
+    significado: p.significado || ""
+  })).filter(p => !isNaN(p.id));
+
+  db.sort(() => Math.random() - 0.5);
+  let cats = [...new Set(db.map(p=>p.categoria))];
+  if(!categoriaAtual) categoriaAtual = cats[Math.floor(Math.random() * cats.length)];
+  
+  renderTabs(cats);
+  renderProdutos();
+  atualizar();
+  centrarAba(categoriaAtual);
+});
+
+function renderTabs(cats) {
+  let labels = db.some(p=>p.promo) ? ["🔥 Promoções", ...cats] : cats;
+  document.getElementById('tabs').innerHTML = labels.map(c => `
+    <div class="tab ${c === categoriaAtual ? 'active' : ''}" onclick="mudarCat('${c}')">${c}</div>
+  `).join("");
+}
+
+function mudarCat(c) {
+  categoriaAtual = c;
+  paginaAtual = 1;
+  document.getElementById('pesquisa').value = "";
+  let cats = [...new Set(db.map(p=>p.categoria))];
+  renderTabs(cats);
+  renderProdutos();
+  centrarAba(c);
+
+  const cleanCat = c.replace(/\s+/g, '-');
+  window.history.pushState({}, '', '#' + cleanCat);
+}
+
+function irParaPagina(n) { paginaAtual = n; renderProdutos(); window.scrollTo(0,0); }
+
+function renderProdutos() {
+  let termo = document.getElementById('pesquisa').value.toLowerCase();
+  let lista = db.filter(p => {
+    if(termo) return p.nome.toLowerCase().includes(termo) || p.id.toString().includes(termo);
+    return categoriaAtual === "🔥 Promoções" ? p.promo : p.categoria === categoriaAtual;
+  });
+
+  let itens = lista.slice((paginaAtual-1)*itensPorPagina, paginaAtual*itensPorPagina);
+
+  document.getElementById('loja').innerHTML = itens.map(p => {
+    let isFav = favs.includes(p.nome) ? "❤️" : "🤍";
+    let precoHTML = p.promo && p.precoPromo 
+      ? `<p style="text-decoration:line-through;color:#999;font-size:13px;margin:0;">${p.preco.toFixed(2)}€</p>
+         <p style="color:#dc2626;font-weight:bold;font-size:20px;margin:5px 0;">${p.precoPromo.toFixed(2)}€ 🔥</p>`
+      : `<p style="font-weight:bold;font-size:20px;margin:10px 0;">${p.preco.toFixed(2)}€</p>`;
+
+    return `
+      <div class="card">
+        <div class="card-wrap">
+          ${p.promo ? '<div class="badge">PROMO</div>' : ''}
+          <span class="fav" onclick="toggleFav('${p.nome}')">${isFav}</span>
+          <img src="${p.img}" class="img-p" onclick="abrirImg('${p.img}')">
+        </div>
+        <div class="info">
+          <h3 class="nome-clicavel" onclick="abrirSignificado('${p.nome}', '${p.significado.replace(/'/g, "\\'")}')">#${p.id} - ${p.nome} ℹ️</h3>
+          ${precoHTML}
+          <button class="btn-add" onclick="add(${id})">Adicionar ao Pedido</button>
+        </div>
+      </div>`;
+  }).join("");
+
+  let totalPags = Math.ceil(lista.length / itensPorPagina);
+  let pagHTML = "";
+  for(let i=1; i<=totalPags; i++) {
+    pagHTML += `<button class="btn-pag ${i===paginaAtual?'active':''}" onclick="irParaPagina(${i})">${i}</button>`;
+  }
+  document.getElementById('paginacao').innerHTML = totalPags > 1 ? pagHTML : "";
+}
+
+function add(id) {
+  let p = db.find(x => x.id === id);
+  let valor = (p.promo && p.precoPromo) ? p.precoPromo : p.preco;
+  let ex = cart.find(x => x.id === id);
+  if(ex) ex.qtd++; else cart.push({...p, precoFinal: valor, qtd: 1});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  atualizar();
+}
+
+function atualizar() {
+  let total = 0;
+  document.getElementById('itens-carrinho').innerHTML = cart.map((p, i) => {
+    total += (p.precoFinal * p.qtd);
+    return `
+      <div class="item-cart">
+        <span>#${p.id} ${p.nome} (x${p.qtd})</span>
+        <div class="cart-btns">
+          <button onclick="mudarQtd(${i},-1)">➖</button>
+          <button onclick="mudarQtd(${i},1)">➕</button>
+        </div>
+      </div>`;
+  }).join("") || "<p style='color:#888'>O teu carrinho está vazio...</p>";
+  
+  let envio = document.getElementById('envio').value;
+  document.getElementById('total-carrinho').innerHTML = `<strong>Total: ${total.toFixed(2)}€</strong><br><small>Método: ${envio}</small>`;
+}
+
+function mudarQtd(i, n) {
+  cart[i].qtd += n;
+  if(cart[i].qtd < 1) cart.splice(i, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  atualizar();
+}
+
+function finalizar() {
+  if(!cart.length) return alert("Carrinho vazio!");
+  let nome = document.getElementById('cliente').value;
+  let tel = document.getElementById('telefone').value;
+  let morada = document.getElementById('morada').value;
+  let envio = document.getElementById('envio').value;
+  if(!nome || !tel) return alert("Por favor indica Nome e Telemóvel.");
+  
+  let total = cart.reduce((acc,p)=> acc + (p.precoFinal*p.qtd), 0);
+  let msg = `*PEDIDO PAULA'S ARTE*\n\n*Cliente:* ${nome}\n*Tel:* ${tel}\n*Morada:* ${morada}\n*Envio:* ${envio}\n\n*ITENS:*\n` + 
+            cart.map(p => `- #${p.id} ${p.nome} (x${p.qtd})`).join("\n") + 
+            `\n\n*TOTAL:* ${total.toFixed(2)}€\n*Pagamento:* MBWay 938671014`;
+            
+  window.open(`https://wa.me/351938671014?text=${encodeURIComponent(msg)}`);
+}
+
+function limparCarrinho() { if(confirm("Anular pedido?")){ cart = []; localStorage.removeItem("cart"); atualizar(); } }
+function abrirImg(src) { document.getElementById('modalImg').style.display = 'flex'; document.getElementById('imgGrande').src = src; }
+function abrirSignificado(nome, text) {
+  document.getElementById('tituloPedra').innerText = nome;
+  document.getElementById('corpoSignificado').innerText = text || "Detalhes disponíveis em breve! ✨";
+  document.getElementById('modalTexto').style.display = 'flex';
+}
+function fecharModal() { document.getElementById('modalImg').style.display = 'none'; document.getElementById('modalTexto').style.display = 'none'; }
+function toggleFav(n) {
+  if(favs.includes(n)) favs = favs.filter(f => f !== n);
+  else favs.push(n);
+  localStorage.setItem("favs", JSON.stringify(favs));
+  renderProdutos();
+}
+function copiar(){
+  let total = cart.reduce((acc,p)=> acc + (p.precoFinal*p.qtd), 0);
+  let resumo = `Pedido Paula's arte - Total: ${total.toFixed(2)}€`;
+  navigator.clipboard.writeText(resumo);
+  alert("Resumo copiado!");
+}
+</script>
+</body>
+</html>
