@@ -12,6 +12,7 @@
 <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_WfWrS7-NmiNa3cHM1Yu7GraVdop0Tkr9d5fhijAZFnYxntWCYR5AN9xWN2un-XSQKaEHFvC8aYe5cvu18W9lqj_YsuoSyA0ET5_XDCq61ch-SC2XbejIYmeqevaLOnvV1GS9aFrx2UyirC061zv8zbg32vhHDHTt3TB6UC3gFxmGepRpQ6mfIH5khf4/s1024/32893.png">
 <meta property="og:url" content="https://paulasarte49.github.io/">
 
+<link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png">
 <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqH1RISYU4iQR7qXZbyPVBkh7hZzPxX2151qziAI5pvDPkXaQjng83RNnU7zlDmvHQCxHVmP_dudnaXsmN0-sa66i4XSBpy9o52Npe-STWHwe8zl5B1lXc37jJ5fQYyNOsv-bzNssZscqaxuDPVnhzY9uMoK2YHaoJBRkGQJMfCsz3OFBGnL7oEmbhZ1U/s1536/32624.png">
 <meta name="theme-color" content="#ffffff">
@@ -75,6 +76,9 @@ h1 .titulo { margin-top:8px; color:var(--cinza-escuro); font-size:36px; font-fam
 
 .btn-w { background:#25D366; color:white; padding:15px; border:none; width:100%; border-radius:10px; margin-top:8px; cursor:pointer; font-weight: bold; font-size: 16px; }
 
+#install-banner { position: fixed; bottom: 20px; left: 10px; right: 10px; background: var(--cinza-escuro); color: white; padding: 15px; border-radius: 12px; display: none; z-index: 10001; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+#install-banner button { background: white; color: var(--cinza-escuro); border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; margin-top: 10px; cursor: pointer; }
+
 .modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:10000; }
 .modal img { max-width:95%; max-height:85%; border-radius:10px; }
 .modal-texto { background:white; padding:25px; border-radius:20px; max-width:85%; text-align:center; }
@@ -91,6 +95,11 @@ input, select { width:100%; padding:12px; margin-top:8px; border-radius:8px; bor
 <div id="splash">
   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_WfWrS7-NmiNa3cHM1Yu7GraVdop0Tkr9d5fhijAZFnYxntWCYR5AN9xWN2un-XSQKaEHFvC8aYe5cvu18W9lqj_YsuoSyA0ET5_XDCq61ch-SC2XbejIYmeqevaLOnvV1GS9aFrx2UyirC061zv8zbg32vhHDHTt3TB6UC3gFxmGepRpQ6mfIH5khf4/s1024/32893.png">
   <h2>Olá 👋</h2>
+</div>
+
+<div id="install-banner">
+  <div>Gostavas de ter a Paula's arte no teu ecrã inicial? ✨</div>
+  <button id="install-button">Instalar Agora</button>
 </div>
 
 <h1>
@@ -140,6 +149,34 @@ input, select { width:100%; padding:12px; margin-top:8px; border-radius:8px; bor
 </div>
 
 <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW error:', err));
+  });
+}
+
+let deferredPrompt;
+const installBanner = document.getElementById('install-banner');
+const installButton = document.getElementById('install-button');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  let visitas = parseInt(localStorage.getItem('visitas_paulasarte') || '0') + 1;
+  localStorage.setItem('visitas_paulasarte', visitas);
+  if (visitas >= 3) { installBanner.style.display = 'block'; }
+});
+
+installButton.addEventListener('click', () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') { installBanner.style.display = 'none'; }
+      deferredPrompt = null;
+    });
+  }
+});
+
 window.onload = () => setTimeout(() => document.getElementById("splash").style.display = "none", 2000);
 
 const API = 'https://script.google.com/macros/s/AKfycbwaadAQH8bqSJlTZyPg0sIG5FKil3Q3TC5UsPIYO9a6oqji9ZIvh0YdxDFiJueCReX7Qg/exec'; 
